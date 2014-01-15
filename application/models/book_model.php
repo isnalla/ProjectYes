@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Book extends CI_Model {
 
     /**
      * Index Page for this controller.
@@ -21,8 +21,8 @@ class Welcome extends CI_Controller {
     {
         $data['title'] = "Sample";
         $this->load->view('manage_view',$data);
-
     }
+
 }
 
 /* End of file welcome.php */
