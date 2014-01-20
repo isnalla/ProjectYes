@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Booker extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -21,9 +21,19 @@ class Welcome extends CI_Controller {
     {
         $data['title'] = "Sample";
         $this->load->view('manage_view',$data);
+        $this->load->model('book_model');
+        if(isset($_GET['add_submit'])){
+            $this->book_model->insertBook();
+        }
+        elseif(isset($_GET['del_submit'])){
+            $this->book_model->delBook($_GET['book_no_del']);
 
+        }
+        else{
+            echo 'hello';
+        }
     }
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file booker.php */
+/* Location: ./application/controllers/booker.php */

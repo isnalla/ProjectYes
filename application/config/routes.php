@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "welcome"; // change this
+$route['default_controller'] = "booker"; // change this
 $route['404_override'] = '';
 
 

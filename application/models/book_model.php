@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Book extends CI_Model {
+class Book_model extends CI_Model {
 
     /**
      * Index Page for this controller.
@@ -21,9 +21,21 @@ class Book extends CI_Model {
     {
         $data['title'] = "Sample";
         $this->load->view('manage_view',$data);
+
+
     }
+
+    function insertBook(){
+        $this->db->query("INSERT INTO book VALUES ('{$_GET['book_no']}','{$_GET['book_title']}','{$_GET['status']}','{$_GET['description']}','{$_GET['publisher']}','{$_GET['date_published']}')");
+    }
+
+    function delBook($book_no){
+
+        $this->db->query("DELETE FROM book WHERE '{$book_no}'");
+    }
+
 
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file booker.php */
+/* Location: ./application/controllers/booker.php */
