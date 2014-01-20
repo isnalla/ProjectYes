@@ -29,9 +29,9 @@ class Book_model extends CI_Model {
         $this->db->query("INSERT INTO book VALUES ('{$_GET['book_no']}','{$_GET['book_title']}','{$_GET['status']}','{$_GET['description']}','{$_GET['publisher']}','{$_GET['date_published']}')");
     }
 
-    function delBook($book_no){
+    function delBook($data){
 
-        $this->db->query("DELETE FROM book WHERE '{$book_no}'");
+        $this->db->query("DELETE FROM book WHERE book_no='{$data}'");
     }
 
 

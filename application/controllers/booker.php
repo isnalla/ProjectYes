@@ -27,7 +27,6 @@ class Booker extends CI_Controller {
         }
         elseif(isset($_GET['del_submit'])){
             $this->book_model->delBook($_GET['book_no_del']);
-
         }
         else{
             echo 'hello';
