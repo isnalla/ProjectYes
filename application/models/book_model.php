@@ -17,21 +17,33 @@ class Book_model extends CI_Model {
      * map to /index.php/welcome/<method_name>
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
-    public function index()
-    {
-        $data['title'] = "Sample";
-        $this->load->view('manage_view',$data);
-
-
+    function __construct(){
+        parent::__construct();
+        $this->load->database();
     }
 
-    function insertBook(){
-        $this->db->query("INSERT INTO book VALUES ('{$_GET['book_no']}','{$_GET['book_title']}','{$_GET['status']}','{$_GET['description']}','{$_GET['publisher']}','{$_GET['date_published']}')");
+    function insertBook($data){
+        $this->db->query("INSERT INTO book (book_no,book_title,description,publisher,date_published)".
+                                                  " VALUES ('{$data['book_no']}'".
+                                                  ",'{$data['book_title']}'".
+                                                  ",'{$data['description']}'".
+                                                  ",'{$data['publisher']}'".
+                                                  ",'{$data['date_published']}')");
+    }
+ 
+    function delBook($book_no){
+
+        $this->db->query("DELETE FROM book WHERE book_no='{$book_no}'");
     }
 
-    function delBook($data){
-
-        $this->db->query("DELETE FROM book WHERE book_no='{$data}'");
+    function editBook($data){
+        $sql="UPDATE book SET book_no='{$data['book_no']}'".
+                                    ",book_title='{$data['book_title']}'".
+                                    ",description='{$data['book_no']}'".
+                                    ",publisher='{$data['publisher']}'".
+                                    ",date_published='{$data['date_published']}'".
+                                    ", WHERE book_no='{$data['prev_book_no']}'";
+        $this->db->query($sql);
     }
 
 
