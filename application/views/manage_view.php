@@ -233,32 +233,23 @@
     <div>
          <!--table of books-->
     </div>
-    <form action="index.php/booker/add" method="get" name="add_form">
-        <input type="text" name="book_no" id="book_no"/>
-        <input type="text" name="book_title" id="book_title"/>
-        <!--input type="text" name="status" id="status"-->
-
-        <input type="text" name="description" id="description"/>
-        <input type="text" name="publisher" id="publisher"/>
-        <input type="date" name="date_published" id="date_published"/>
-        <input type="submit" name="add_submit" id="add_submit">
-    </form>
     <table name = "add_book">
         <th>ADD BOOK</th>
         <tr>
             <form method="get" name="add_book">
-                <td><input type="text" name="book_no" id="book_no"/></td>
-                <td><input type="text" name="book_title" id="book_title"/></td>
-                <td>
+                <td>Book Number<input type="text" name="book_no" id="book_no"/></td>
+                <td>Book Title<input type="text" name="book_title" id="book_title"/></td>
+                <td>Status
                     <select>
                         <option value = "available"> Available </option>
                         <option value = "ewan"> ewan </option>
                         <option value = "borrowed"> Borrowed </option>
                      </select>
                 </td>
-                <td><input type="text" name="description" id="description"/></td>
-                <td><input type="text" name="publisher" id="publisher"/></td>
-                <td><input type="date" name="date_published" id="date_published"/></td>
+                <td>Description<input type="text" name="description" id="description"/></td>
+                <td>Publisher<input type="text" name="publisher" id="publisher"/></td>
+                <td>Date Published<input type="date" name="date_published" id="date_published"/></td>
+                <td>Tags<input type="text" name="tags" id="tags"/></td>
                 <td><input type="submit" name="add_submit" id="add_submit" disabled = "disabled"></td>
             </form>
         </tr>
@@ -366,27 +357,16 @@
         </tr>
     </table>
     <hr>
-    <form method="get" name="edit_form">
-        <input type="text" name="book_no_edit" id="book_no_edit"/>
-        <input type="submit" name="edit_submit" id="edit_submit">
-        <br> book title : <input type="text" name="book_title" id="book_title" />
-        <br> status : <input type="text" name="status" id="status"/>
-        <br> description : <input type="text" name="description" id="description"/>
-        <br> publisher : <input type="text" name="publisher" id="publisher"/>
-        <br> date published : <input type="date" name="date_published" id="date_published"/>
-        <input type="submit" name="save_edit_submit" id="save_edit_submit">
-
-    </form>
 
 
     <form action="index.php/booker/edit" method="get" name="edit_form">
         <!--input type="text" name="book_no_edit" id="book_no_edit"/-->
         <input type="text" value="a" name="prev_book_no" id="prev_book_no" hidden/>
-        <br> book number : <input type="text" name="book_no" id="book_no" />
-        <br> book title : <input type="text" name="book_title" id="book_title" />
-        <br> description : <input type="text" name="description" id="description"/>
-        <br> publisher : <input type="text" name="publisher" id="publisher"/>
-        <br> date published : <input type="date" name="date_published" id="date_published"/>
+        <br> Book Number : <input type="text" name="book_no" id="book_no" />
+        <br> Book Title : <input type="text" name="book_title" id="book_title"  />
+        <br> Description : <input type="text" name="description" id="description"/>
+        <br> Publisher : <input type="text" name="publisher" id="publisher"/>
+        <br> Date Published : <input type="date" name="date_published" id="date_published"/>
         <input type="submit" name="save_edit_submit" id="save_edit_submit">
     </form>
 
