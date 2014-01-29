@@ -28,10 +28,30 @@ class Booker extends CI_Controller {
         $data['description'] = $_GET['description'];
         $data['publisher'] = $_GET['publisher'];
         $data['date_published'] = $_GET['date_published'];
-
+        $data['tags'] = $_GET['tags'];
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('book_no','BookNumber','required|is_unique[ics-lib-db.Book_no]|min_length[1]|alpha_numeric');
+        $this->form_validation->set_rules('book_title','BookTitle','required' );
+        $this->form_validation->set_rules('description','Description','required');
+        $this->form_validation->set_rules('publisher','Publisher','required');
+        $this->form_validation->set_rules('date_published','DatePublished','required');
+        $this->form_validation->set_rules('tags','Tags','callback_tags_check');
         $this->book_model->insertBook($data);
 
-        $this->index();
+        if ($this->form_validation->run()==FALSE){
+
+            $this->load->view(manage_view);
+
+        }
+        else{
+            $this->load->view(views/index.html);
+
+
+        }
+        public function tags_check($str)
+        {
+            return ( ! preg_match("/^([a-zA-Z0-9 ]+,)*([a-zA-Z0-9]*)$/", $str)) ? FALSE : TRUE;
+        }
     }
 
     public function delete(){
@@ -66,17 +86,17 @@ class Booker extends CI_Controller {
 
         }
         /*ayusin mo to allan!!!*/
-        elseif(isset($_GET['edit_submit'])){
+        /*elseif(isset($_GET['edit_submit'])){
             var_dump($this->book_model->editBook($_GET['book_no_edit']));
             $res = $this->book_model->editBook($_GET['book_no_edit']);
             $newData=($res[0]->book_title);
             echo "<script> $('input[type=\"text\"][id=\"book_title\"]').val('".$newData."') </script>";
-        }
+        }*/
         elseif(isset($_GET['save_edit_submit'])){
 
         }
         else{
-            echo 'hello';
+
         }
     }
 }

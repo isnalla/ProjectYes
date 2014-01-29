@@ -28,7 +28,8 @@ class Book_model extends CI_Model {
                                                   ",'{$data['book_title']}'".
                                                   ",'{$data['description']}'".
                                                   ",'{$data['publisher']}'".
-                                                  ",'{$data['date_published']}')");
+                                                  ",'{$data['date_published']}'".
+                                                  ",'{$data['tags']}'");
     }
  
     function delBook($book_no){
@@ -36,20 +37,15 @@ class Book_model extends CI_Model {
         $this->db->query("DELETE FROM book WHERE book_no='{$book_no}'");
     }
 
-    function editBook($data){
-        $sql="UPDATE book SET book_no='{$data['book_no']}'".
-                                    ",book_title='{$data['book_title']}'".
-                                    ",description='{$data['book_no']}'".
-                                    ",publisher='{$data['publisher']}'".
-                                    ",date_published='{$data['date_published']}'".
-                                    ", WHERE book_no='{$data['prev_book_no']}'";
-        $this->db->query($sql);
+
+
+
     }
 
 
 
 
-}
+
 
 /* End of file booker.php */
 /* Location: ./application/controllers/booker.php */
