@@ -65,6 +65,16 @@ class Booker extends CI_Controller {
         elseif(isset($_GET['save_edit_submit'])){
 
         }
+        /*ayusin mo to allan!!!*/
+        elseif(isset($_GET['edit_submit'])){
+            var_dump($this->book_model->editBook($_GET['book_no_edit']));
+            $res = $this->book_model->editBook($_GET['book_no_edit']);
+            $newData=($res[0]->book_title);
+            echo "<script> $('input[type=\"text\"][id=\"book_title\"]').val('".$newData."') </script>";
+        }
+        elseif(isset($_GET['save_edit_submit'])){
+
+        }
         else{
             echo 'hello';
         }

@@ -10,7 +10,100 @@
 <head>
     <title><?php echo $title ?></title>
 </head>
-<body>
+<script>
+    var str, msg;
+    function main(){    //for validation
+        add_book.book_no.onblur = validateBookNo;
+        add_book.book_title.onblur = validateText;
+        add_book.description.onblur = validateDescription;
+        add_book.publisher.onblur = validatePublisher;
+        add_book.date_published.onblur = validateDatePublished;
+        checkAll;
+    }
+
+    function validateBookNo(){
+        str = add_book.book_no.value;
+        msg = "";
+        if(str == ""){
+            msg+="Book no is required.";
+        }//else if(!str.match(/^[+]\([0-9]{12}\)$/) ){
+        else if(!str.match(/[0-9][a-zA-Z]$/)){
+            msg+="Wrong Input";
+        }
+        else if(msg == "Invalid input: "){
+            msg = "";
+        }
+        document.getElementsByName("book_no_msg")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function validateText(){
+        str = add_book.book_title.value;
+        msg = "";
+        if(str == ""){
+            msg+="Book title is required.";
+        }
+        else if(!str.match(/^[a-zA-Z]+$/)){
+            msg+="Wrong Input";
+        }
+        else if(msg == "Invalid input: "){
+            msg = "";
+        }
+        document.getElementsByName("book_title_msg")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function validateDescription(){
+        str = add_book.description.value;
+        msg = "";
+        if(str == ""){
+            msg+="Description is required.";
+        }
+        document.getElementsByName("description_msg")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function validatePublisher(){
+        str = add_book.publisher.value;
+        msg = "";
+        if(str == ""){
+            msg+="Publisher is required.";
+        }
+        document.getElementsByName("publisher_msg")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function validateDatePublished(){
+        str = add_book.date_published.value;
+        msg = "";
+        if(str == ""){
+            msg+="Date is required.";
+        }
+        document.getElementsByName("date_published_msg")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function checkAll(){
+        if(validateText() && validateBookNo() && validateDescription() && validatePublisher() && validateDatePublished() )
+        {
+            //enable disbled button
+            document.getElementById['add_submit'].disabled = false;
+        }
+
+    }
+
+</script>
+<body onload = main()>
     <div>
          <!--table of books-->
     </div>
@@ -24,6 +117,35 @@
         <input type="date" name="date_published" id="date_published"/>
         <input type="submit" name="add_submit" id="add_submit">
     </form>
+    <table name = "add_book">
+        <th>ADD BOOK</th>
+        <tr>
+            <form method="get" name="add_book">
+                <td><input type="text" name="book_no" id="book_no"/></td>
+                <td><input type="text" name="book_title" id="book_title"/></td>
+                <td>
+                    <select>
+                        <option value = "available"> Available </option>
+                        <option value = "ewan"> ewan </option>
+                        <option value = "borrowed"> Borrowed </option>
+                     </select>
+                </td>
+                <td><input type="text" name="description" id="description"/></td>
+                <td><input type="text" name="publisher" id="publisher"/></td>
+                <td><input type="date" name="date_published" id="date_published"/></td>
+                <td><input type="submit" name="add_submit" id="add_submit" disabled = "disabled"></td>
+            </form>
+        </tr>
+        <tr>
+            <td><span name = "book_no_msg"></span></span></td>
+            <td> <span name = "book_title_msg"></span></td>
+            <td></td>
+            <td> <span name = "description_msg"></span></td>
+            <td> <span name = "publisher_msg"></span></td>
+            <td> <span name = "date_published_msg"></span></td>
+            <td></td>
+        </tr>
+    </table>
     <hr>
     <form action="index.php/booker/delete" method="get" name="del_form">
         <input type="text" name="book_no" id="book_no_del"/>
@@ -74,6 +196,19 @@
             </td>
         </tr>
     </table>
+    <hr>
+    <form method="get" name="edit_form">
+        <input type="text" name="book_no_edit" id="book_no_edit"/>
+        <input type="submit" name="edit_submit" id="edit_submit">
+        <br> book title : <input type="text" name="book_title" id="book_title" />
+        <br> status : <input type="text" name="status" id="status"/>
+        <br> description : <input type="text" name="description" id="description"/>
+        <br> publisher : <input type="text" name="publisher" id="publisher"/>
+        <br> date published : <input type="date" name="date_published" id="date_published"/>
+        <input type="submit" name="save_edit_submit" id="save_edit_submit">
+
+    </form>
+
 
     <form action="index.php/booker/edit" method="get" name="edit_form">
         <!--input type="text" name="book_no_edit" id="book_no_edit"/-->

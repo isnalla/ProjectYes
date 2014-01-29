@@ -47,6 +47,8 @@ class Book_model extends CI_Model {
     }
 
 
+
+
 }
 
 /* End of file booker.php */
