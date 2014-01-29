@@ -215,7 +215,6 @@
             msg+="Wrong date.";
         }
         document.getElementsByName("help_date_published")[0].innerHTML = msg;
-
         if(msg == ""){
             return true;
         }
