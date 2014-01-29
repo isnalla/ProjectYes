@@ -27,7 +27,7 @@
         if(str == ""){
             msg+="Book no is required.";
         }//else if(!str.match(/^[+]\([0-9]{12}\)$/) ){
-        else if(!str.match(/[0-9][a-zA-Z]$/)){
+        else if(!str.match(/[0-9a-zA-Z]$/)){
             msg+="Wrong Input";
         }
         else if(msg == "Invalid input: "){
@@ -83,9 +83,24 @@
     }
     function validateDatePublished(){
         str = add_book.date_published.value;
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var year = today.getFullYear();
+
         msg = "";
         if(str == ""){
             msg+="Date is required.";
+        }
+        else if(str.getFullYear()>=year){
+            if(str.getMonth()+1 >= mm){
+                if(str.getDate() > dd){
+                    msg+="Wrong date.";
+                }
+                else{
+                    msg+="Wrong date.";
+                }
+            }
         }
         document.getElementsByName("date_published_msg")[0].innerHTML = msg;
 
@@ -98,6 +113,117 @@
         {
             //enable disbled button
             document.getElementById['add_submit'].disabled = false;
+        }
+
+    }
+
+</script>
+
+<script>
+    var str, msg;
+    function main(){    //for validation
+        edit_book.book_no.onblur = edit_validateBookNo;
+        edit_book.book_title.onblur = edit_validateText;
+        edit_book.book_desc.onblur = edit_validateDescription;
+        edit_book.book_publisher.onblur = edit_validatePublisher;
+        edit_book.date_published.onblur = edit_validateDatePublished;
+        edit_book.book_author.onblur = edit_validateAuthor;
+        checkAll;
+    }
+
+    function edit_validateBookNo(){
+        str = edit_book.book_no.value;
+        msg = "";
+        if(str == ""){
+            msg+="Book no is required.";
+        }//else if(!str.match(/^[+]\([0-9]{12}\)$/) ){
+        else if(!str.match(/[0-9a-zA-Z]$/)){
+            msg+="Wrong Input";
+        }
+        else if(msg == "Invalid input: "){
+            msg = "";
+        }
+        document.getElementsByName("help_book_no")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function edit_validateText(){
+        str = edit_book.book_title.value;
+        msg = "";
+        if(str == ""){
+            msg+="Book title is required.";
+        }
+        else if(!str.match(/[0-9a-zA-Z\ \.\-\!]+$/)){
+            msg+="Wrong Input";
+        }
+        else if(msg == "Invalid input: "){
+            msg = "";
+        }
+        document.getElementsByName("help_book_title")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function edit_validateDescription(){
+        str = edit_book.book_desc.value;
+        msg = "";
+        if(str == ""){
+            msg+="Description is required.";
+        }
+        document.getElementsByName("help_book_description")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function edit_validatePublisher(){
+        str = edit_book.book_publisher.value;
+        msg = "";
+        if(str == ""){
+            msg+="Publisher is required.";
+        }
+        document.getElementsByName("help_book_publisher")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function edit_validateAuthor(){
+        str = edit_book.book_author.value;
+        msg = "";
+        if(str == ""){
+            msg+="Author is required.";
+        }
+        document.getElementsByName("help_book_author")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function edit_validateDatePublished(){
+        str = edit_book.date_published.value;
+
+        msg = "";
+        if(str == ""){
+            msg+="Date is required.";
+        }
+        else if(str > Date()){
+
+            msg+="Wrong date.";
+        }
+        document.getElementsByName("help_date_published")[0].innerHTML = msg;
+
+        if(msg == ""){
+            return true;
+        }
+    }
+    function checkAll(){
+        if(edit_validateText() && edit_validateBookNo() && edit_validateDescription() && edit_validatePublisher() && edit_validateDatePublished() && edit_validateAuthor()){
+            //enable disbled button
+            document.getElementById['edit_submit'].disabled = false;
         }
 
     }
@@ -152,6 +278,49 @@
         <input type="submit" name="submit" id="del_submit">
     </form>
     <hr>
+    <hr>
+    EDIT BOOK
+    <form name="edit_book">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="book_no">Book No: </label>
+            <input type="text" name="book_no" id="book_no" /><br/><span name="help_book_no"> </span></br>
+            <br /><br />
+
+            <label for="book_title">Book Title: </label>
+            <input type="text" name="book_title" id="book_title" /><br/><span name="help_book_title"> </span></br>
+            <br /><br />
+
+            <label for="book_status">Book Status: </label>
+            <select name="book_status" id="book_status">
+                <option value = "available"> Available </option>
+                <option value = "reserved"> Reserved </option>
+                <option value = "borrowed"> Borrowed </option>
+            </select>
+            <span name="help_book_status"> </span>
+            <br /><br />
+
+            <label for="book_description">Book Description: </label></br>
+            <textarea name="book_desc" id="book_desc"size=50 maxlength=255></textarea><br/><span name="help_book_description"> </span></br>
+            <br /><br />
+
+            <label for="book_publisher">Book Publisher: </label>
+            <input type="text" name="book_publisher" id="book_publisher" /><br/><span name="help_book_publisher"> </span></br>
+            <br /><br />
+
+            <label for="book_author">Book Author: </label>
+            <input type="text" name="book_author" id="book_author" /><br/><span name="help_book_author"> </span></br>
+            <br /><br />
+
+            Date Published:
+            <input type="date" name="date_published" /> <span name="help_date_published"> </span> </br>
+
+        </fieldset>
+
+        <input type="submit"/>
+
+    </form>
     <table id="sample_table" name="sample_table">
         <tr>
             <th>book_no</th>
