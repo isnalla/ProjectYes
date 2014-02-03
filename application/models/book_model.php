@@ -23,24 +23,34 @@ class Book_model extends CI_Model {
     }
 
     function insertBook($data){
-        $this->db->query("INSERT INTO book (book_no,book_title,description,publisher,date_published)".
+        $this->db->query("INSERT INTO book (book_no,book_title,description,publisher,date_published,tags)".
                                                   " VALUES ('{$data['book_no']}'".
                                                   ",'{$data['book_title']}'".
                                                   ",'{$data['description']}'".
                                                   ",'{$data['publisher']}'".
                                                   ",'{$data['date_published']}'".
-                                                  ",'{$data['tags']}'");
+                                                  ",'{$data['tags']}')");
     }
  
     function delBook($book_no){
-
         $this->db->query("DELETE FROM book WHERE book_no='{$book_no}'");
     }
 
+    function query_result($details){
+        $details['search_term'] = filter_var($details['search_term'], FILTER_SANITIZE_STRING);
 
+        //construct query strings
+        $q = array(
+            'select'	=> "select * from book b, author a ",
+            'where'		=> "where " . $details['status_check'] . " b.book_no = a.book_no and " . $details['search_by'] . " like '%" . $details['search_term'] . "%' ",
+            'orderby'   => "order by " . $details['order_by']
+        );
 
+        $query_string = $q['select'] . $q['where'] . $q['orderby'];
 
+        return $this->db->query($query_string)->result();
     }
+}
 
 
 
