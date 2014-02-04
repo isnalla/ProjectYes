@@ -1,7 +1,5 @@
 			<div id="search"><br>
-
 				<form name="search_form" method="post">
-
 					<div id="status">
 						<input id = "available" type="checkbox" name = "available" checked>
 						<label for="available">Available</label>

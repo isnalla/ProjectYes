@@ -3,7 +3,6 @@
 					<?php
                         $is_admin = isset($_SESSION['is_admin']);
                         $is_admin = true; //temporary
-
 						if (isset($table)){
                             echo "<tr>
 								<th>Book No.	</th>
