@@ -102,10 +102,10 @@
             }
             return false;
         }
-
+/*
         function validateTags(){
             return true;
-        }
+        }*/
 
         function checkAll(){
             var addButton = $('#add_button');

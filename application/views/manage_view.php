@@ -12,13 +12,13 @@
             <th>Tags 		</th>
         </tr>
         <tr>
-            <td><input type="text" name="book_no" id="add_book_no" required/></td>
-            <td><input type="text" name="book_title" id="add_book_title" required/></td>
-            <td><input type="text" name="author" id="add_author" /></td>
-            <td><textarea name="description" id="add_description" ></textarea></td>
-            <td><input type="text" name="publisher" id="add_publisher" /></td>
-            <td><input type="date" name="date_published" id="add_date_published"/></td>
-            <td><input type="text" name="tags" id="add_tags"/></td>
+            <td><input type="text" name="book_no" id="add_book_no" placeholder="Book Number" required autofocus pattern="[A-Za-z0-9]+"></td>
+            <td><input type="text" name="book_title" id="add_book_title" placeholder="Book Title" required pattern="[-A-Za-z0-9]+"/></td>
+            <td><input type="text" name="author" id="add_author" placeholder="Author" pattern="[A-Za-z]+[-]?[A-Za-z]+"/></td>
+            <td><textarea name="description" id="add_description" placeholder="Description" required ></textarea></td>
+            <td><input type="text" name="publisher" id="add_publisher" placeholder="Publisher" required /></td>
+            <td><input type="date" name="date_published" id="add_date_published" placeholder="Date Published" required/></td>
+            <td><input type="text" name="tags" id="add_tags" placeholder="Tags"required pattern="^[-a-zA-Z0-9]+{\,[a-zA-Z0-9]+}*"/></td>
             <td><button type="submit" name="add_button" id="add_button">Add Button</button></td>
         </tr>
         <tr>

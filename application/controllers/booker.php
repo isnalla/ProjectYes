@@ -36,7 +36,7 @@ class Booker extends CI_Controller {
         $this->form_validation->set_rules('description','Description','required');
         $this->form_validation->set_rules('publisher','Publisher','required');
         $this->form_validation->set_rules('date_published','DatePublished','required');
-        $this->form_validation->set_rules('tags','Tags','callback_tags_check');
+        $this->form_validation->set_rules('tags','Tags');
 
         $this->book_model->insertBook($data);
 
