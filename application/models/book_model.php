@@ -37,6 +37,15 @@ class Book_model extends CI_Model {
         $this->db->query("INSERT INTO author (book_no,name) VALUES ('{$data['book_no']}','{$data['author']}')");
     }
 
+    function get_book($book_no){
+        $query = "SELECT * FROM book WHERE book_no='".$book_no."'";
+       //$var = $this->db->query($query)->result()
+       //var_dump($var);
+        echo json_encode($this->db->query($query)->result());
+
+
+    }
+
     function editBook($data){
         /*
          *

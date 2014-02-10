@@ -34,19 +34,19 @@
 </form>
 <hr/>
 <h4>EDIT BOOK</h4>
-<form name="edit_book" method="post">
+<form name="edit_book" id="edit_book_form" method="post">
     <fieldset>
         <legend>Personal Information</legend>
 
         <label for="book_no">Book No: </label>
-        <input type="text" name="book_no" id="book_no" /><span name="help_book_no"> </span>
+        <input type="text" name="book_no" id="edit_book_no" /><span name="help_book_no"> </span>
         </br>
         <label for="book_title">Book Title: </label>
-        <input type="text" name="book_title" id="book_title" /><span name="help_book_title"> </span>
+        <input type="text" name="book_title" id="edit_book_title" /><span name="help_book_title"> </span>
         </br>
 
         <label for="book_status">Book Status: </label>
-        <select name="book_status" id="book_status">
+        <select name="book_status" id="edit_book_status">
             <option value = "available"> Available </option>
             <option value = "reserved"> Reserved </option>
             <option value = "borrowed"> Borrowed </option>
@@ -64,9 +64,9 @@
         <input type="text" name="author" id="edit_author" /><span name="help_book_author"> </span>
         </br>
         Tags:
-        <input type="text" name="tags" /><span name="help_tags"></span><br/>
+        <input type="text" name="tags" id= "edit_tags"/><span name="help_tags"></span><br/>
         Date Published:
-        <input type="date" name="date_published" /> <span name="help_date_published"> </span>
+        <input type="date" name="date_published" id="edit_date_published" /> <span name="help_date_published"> </span>
         <br/>
         <input type="submit" id="submit_edit" name="submit_edit"/>
     </fieldset>
