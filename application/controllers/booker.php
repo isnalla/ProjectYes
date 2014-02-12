@@ -59,6 +59,12 @@ class Booker extends CI_Controller {
         $this->book_model->delBook($book_no);
     }
 
+    public function get_book(){
+        $book_no = $_POST['book_no'];
+        
+         echo $this->book_model->get_book($book_no);
+    }
+
     public function edit(){
         //$data['prev_book_no'] = $_POST['prev_book_no']; //temporarily commented out
         $data['book_no'] = $_POST['book_no'];

@@ -36,23 +36,38 @@
                     author : $('#add_author').val()
                 };
 
-                $.post("index.php/booker/add",$('#add_book_form').serialize(),function(data){});
+                $.post("index.php/booker/add",$('#add_book_form').serialize(),function(data){
+                    console.log(data);
+                });
                 $('#add_book_form')[0].reset();
             }
         }
 
         $('#add_book_form').submit(addBook);
 
-        $('.edit').on('click',function(event){
-            var row = $(this).closest('tr').children();
+        $('.edit_button').on('click',function(event){
+            var td = $(this).closest('tr').find('td[book_data=book_no]');
+            var book_no = td.text();
 
-            row[0].innerHTML = inputify('book_no',row[0].innerHTML);
-            row[1].innerHTML = inputify('book_title',row[1].innerHTML);
-            row[2].innerHTML = selectify('book_status',row[2].innerHTML);
-            row[3].innerHTML = inputify('description',row[3].innerHTML);
-            row[4].innerHTML = inputify('publisher',row[4].innerHTML);
-            row[5].innerHTML = datify('date_published',row[5].innerHTML);
-            row[6].innerHTML = inputify('tags',row[6].innerHTML);
+            console.log(book_no);
+
+            $.post("index.php/booker/get_book",{'book_no':book_no},function(data){
+                    var data=JSON.parse(data);
+                    data = data[0];
+                    console.log(data);
+                    var form = $("#edit_book_form");
+                    $(form).find("#edit_book_no").val(data.book_no);
+                    $(form).find("#edit_book_title").val(data.book_title);
+                    $(form).find("#edit_book_status").val(data.status);
+                    $(form).find("#edit_description").val(data.description);
+                    $(form).find("#edit_publisher").val(data.publisher);
+                    // $(form).find("#edit_author").val(data.author);
+
+                   // var date_p=data.date_published.replace(/-/g,"/");
+                 console.log($(form).find("#edit_date_published"));
+                    $(form).find("#edit_date_published")[0].value=data.date_published;
+                    $(form).find("#edit_tags").val(data.tags);
+            });
 
         });
 
