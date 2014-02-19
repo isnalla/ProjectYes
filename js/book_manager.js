@@ -147,7 +147,7 @@ function deleteBook(){
 
 function generateTransactionAnchorHTML(status,book_no){
     var anchorText = "";
-    var href = "href='http://localhost/myfirstrepo/index.php/update_book/";
+    var href = "href='http://localhost/ProjectYes/index.php/update_book/";
     if(status == "reserved"){
         anchorText = "Lend";
         href += "lend/?id="+book_no+"'";

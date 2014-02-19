@@ -83,7 +83,7 @@
 						$.ajax({
 							type: "post",
 							data: my_input,
-							url: "http://localhost/myfirstrepo/index.php/book/search",
+							url: "http://localhost/ProjectYes/index.php/book/search",
 							success: function(data, jqxhr, status){
 								$("#result_container").html(data);
 							}
@@ -116,7 +116,7 @@
 							controller = "reserve";
 
 						$.ajax({
-							url : "http://localhost/myfirstrepo/index.php/" + controller + "/" + method,
+							url : "http://localhost/ProjectYes/index.php/" + controller + "/" + method,
 							data : { arr : info },
 							type : 'POST',
 							dataType : "html",

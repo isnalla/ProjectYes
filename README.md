@@ -1,8 +1,8 @@
-myfirstrepo
+ProjectYes
 ===========
 ROUTING CHANGED FROM:
-localhost/myfirstrepo/index.php/home/faq
----> localhost/myfirstrepo/faq
+localhost/ProjectYes/index.php/home/faq
+---> localhost/ProjectYes/faq
 
 Instructions:
 click wamp icon from taskbar
