@@ -2,88 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7154e306-10ee-4d3a-9c27-388e846c3e5b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/libraries/Firephp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/about_us_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin_user_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/announcements_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/book.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/book_manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/create_account_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/faq.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/faq_manage_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/faq_manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/faq_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/faq_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL DUMPS/ics-lib-db 2014-02-17 20.42.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL DUMPS/ics-lib-db-2-19-14.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL DUMPS/ics-lib-db-with-Table-news-and-faq.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-1.11.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/logged_user_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/login_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/manage_validation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/news.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/news_manage_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/news_manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/news_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/news_table_generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/news_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/notifications_custom_view .php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/notifs.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/notifs_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL DUMPS/our_data.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/search_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/update_account_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL DUMPS/user.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/user_account.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/user_account_model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user_logged_in_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL DUMPS/users.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/view_data.php" />
-      <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\.idea\ProjectYes.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\.idea\modules.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\application\controllers\booker.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\ProjectYes\system\.htaccess" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/book_model.php" afterPath="$PROJECT_DIR$/application/models/book_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/enable_disable.php" afterPath="$PROJECT_DIR$/application/controllers/enable_disable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/enable_disable_model.php" afterPath="$PROJECT_DIR$/application/models/enable_disable_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/enable_disable_view.php" afterPath="$PROJECT_DIR$/application/views/enable_disable_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/favorites.php" afterPath="$PROJECT_DIR$/application/controllers/favorites.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/favorites_model.php" afterPath="$PROJECT_DIR$/application/models/favorites_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/footer.php" afterPath="$PROJECT_DIR$/application/views/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/header.php" afterPath="$PROJECT_DIR$/application/views/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL DUMPS/ics-lib-db.sql" afterPath="$PROJECT_DIR$/SQL DUMPS/ics-lib-db.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manage_view.php" afterPath="$PROJECT_DIR$/application/views/manage_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/reserve.php" afterPath="$PROJECT_DIR$/application/controllers/reserve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/reserve_model.php" afterPath="$PROJECT_DIR$/application/models/reserve_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_view.php" afterPath="$PROJECT_DIR$/application/views/search_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/table_view.php" afterPath="$PROJECT_DIR$/application/views/table_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/update_book.php" afterPath="$PROJECT_DIR$/application/controllers/update_book.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/update_book_model.php" afterPath="$PROJECT_DIR$/application/models/update_book_model.php" />
     </list>
     <ignored path="ProjectYes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,11 +67,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="manage_view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="manage_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/manage_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="39" selection-start="3017" selection-end="3017" vertical-scroll-proportion="0.17782427" vertical-offset="969" max-vertical-offset="1513">
+            <state line="76" column="48" selection-start="3806" selection-end="3806" vertical-scroll-proportion="-12.423077" vertical-offset="969" max-vertical-offset="1513">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="50" selection-start="529" selection-end="529" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="6256">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="27" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="20" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.04" vertical-offset="0" max-vertical-offset="476">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enable_disable.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/enable_disable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="36" selection-start="3875" selection-end="3875" vertical-scroll-proportion="-3.8076923" vertical-offset="2060" max-vertical-offset="2805">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enable_disable_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/enable_disable_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="186" column="48" selection-start="7015" selection-end="7015" vertical-scroll-proportion="-3.8076923" vertical-offset="3063" max-vertical-offset="3604">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/search_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="118" column="52" selection-start="3713" selection-end="3713" vertical-scroll-proportion="-4.0" vertical-offset="1902" max-vertical-offset="2482">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="book_manager.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/book_manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="146" column="0" selection-start="5936" selection-end="5936" vertical-scroll-proportion="0.103950106" vertical-offset="2432" max-vertical-offset="3060">
+              <folding>
+                <marker date="1392774318337" expanded="false" signature="1687:1704" placeholder="..." />
+                <marker date="1392774318337" expanded="false" signature="1791:1805" placeholder="..." />
+                <marker date="1392774318337" expanded="false" signature="1899:1913" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,17 +176,21 @@
         <option value="$PROJECT_DIR$/application/views/index.html" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/controllers/welcome.php" />
-        <option value="$PROJECT_DIR$/application/views/search_view.php" />
         <option value="$PROJECT_DIR$/application/views/book_manager.js" />
         <option value="$PROJECT_DIR$/js/manage_validation.js" />
         <option value="$PROJECT_DIR$/application/views/table_view.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/js/book_manager.js" />
         <option value="$PROJECT_DIR$/application/views/header.php" />
         <option value="$PROJECT_DIR$/application/views/footer.php" />
         <option value="$PROJECT_DIR$/application/models/book_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/booker.php" />
         <option value="$PROJECT_DIR$/application/views/manage_view.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/application/controllers/enable_disable.php" />
+        <option value="$PROJECT_DIR$/application/views/enable_disable_view.php" />
+        <option value="$PROJECT_DIR$/application/views/search_view.php" />
+        <option value="$PROJECT_DIR$/js/book_manager.js" />
       </list>
     </option>
   </component>
@@ -219,7 +210,7 @@
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
     <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -242,10 +233,6 @@
         <subPane subId="Project Files">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ProjectYes">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -366,7 +353,15 @@
       <created>1391526750051</created>
       <updated>1391526750051</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- combined with other modules&#10;Related Changes:&#10;- renamed booker.php -&gt; book.php&#10;- New Module : News/Announcements&#10;- added initial files for FAQ Module&#10;- fixed a lot of bugs&#10;- added AJAX Generation of tables&#10;- fixed attachment of events">
+      <created>1392773698776</created>
+      <updated>1392773698776</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- fixed urls">
+      <created>1392774382091</created>
+      <updated>1392774382091</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -374,19 +369,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="699" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271719" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24798061" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23931624" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24798061" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -397,8 +394,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -423,7 +418,9 @@
     <MESSAGE value="re-structured and finished the modules" />
     <MESSAGE value="fixed some validation issues" />
     <MESSAGE value="fixed search module" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed search module" />
+    <MESSAGE value="- combined with other modules&#10;Related Changes:&#10;- renamed booker.php -&gt; book.php&#10;- New Module : News/Announcements&#10;- added initial files for FAQ Module&#10;- fixed a lot of bugs&#10;- added AJAX Generation of tables&#10;- fixed attachment of events" />
+    <MESSAGE value="- fixed urls" />
+    <option name="LAST_COMMIT_MESSAGE" value="- fixed urls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -475,11 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/book_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="31" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.8515206" vertical-offset="238" max-vertical-offset="1428" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="559" />
@@ -507,8 +499,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/manage_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="39" selection-start="3017" selection-end="3017" vertical-scroll-proportion="0.17782427" vertical-offset="969" max-vertical-offset="1513">
+        <state line="76" column="48" selection-start="3806" selection-end="3806" vertical-scroll-proportion="-12.423077" vertical-offset="969" max-vertical-offset="1513">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="50" selection-start="529" selection-end="529" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="20" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.04" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/enable_disable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="36" selection-start="3875" selection-end="3875" vertical-scroll-proportion="-3.8076923" vertical-offset="2060" max-vertical-offset="2805">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/enable_disable_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="186" column="48" selection-start="7015" selection-end="7015" vertical-scroll-proportion="-3.8076923" vertical-offset="3063" max-vertical-offset="3604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/search_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="52" selection-start="3713" selection-end="3713" vertical-scroll-proportion="-4.0" vertical-offset="1902" max-vertical-offset="2482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/book_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="0" selection-start="5936" selection-end="5936" vertical-scroll-proportion="0.103950106" vertical-offset="2432" max-vertical-offset="3060">
+          <folding>
+            <marker date="1392774318337" expanded="false" signature="1687:1704" placeholder="..." />
+            <marker date="1392774318337" expanded="false" signature="1791:1805" placeholder="..." />
+            <marker date="1392774318337" expanded="false" signature="1899:1913" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
