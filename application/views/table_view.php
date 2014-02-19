@@ -1,16 +1,26 @@
 <div id="search_table_container">
                 <table id="search_table" border="1" width='60%'>
                     <?php
-                        // $is_admin = true; //temporary
+                        //  if (isset($search_suggestion) && trim($search_suggestion) != ''){
+                        //     echo "<span>You might want to search for: <a href='javascript:research;'>" . $search_suggestion . "</a></span><br/><br/>";
+                        // }
 
-                        //new
                         if(isset($table)){
+                            if (trim($search_term)==''){
+                                echo "<span>View all Books</span>";
+                            } else {
+                                echo "<span>Search Results for '" . $search_term . "'</span>";
+                            }
+
+
+
+                            echo '<br/><br/>';
                             echo "<tr >
                                 <th width='10%'>Book No.    </th>
                                 <th width='40%'>Book        </th>
                                 <th width='15%'>Publishment </th>
                             ";
-                            if ($is_admin) echo "<th width='10%'>Tags</th>";
+                            if (isset($_SESSION['type']) && $_SESSION['type'] == "admin") echo "<th width='10%'>Tags</th>";
 
                      
                             echo "</tr>";
@@ -31,38 +41,38 @@
                                             $row->name . "<br>" .
                                         "</em></div>";
 
-
-                                        if ($is_admin){  //--------------- ADMIN ACTIONS ----------------\\
+                                        if (isset($_SESSION['type']) && $_SESSION['type'] == "admin"){  //--------------- ADMIN ACTIONS ----------------\\
                                             
                                             // Edit , Delete Button
-                                            echo "<span><a href='#' bookno='{$row->book_no}' class='edit_button'>Edit</a></span>&nbsp&nbsp&nbsp";
-                                            echo "<span><a href='#' bookno='{$row->book_no}' class='delete_button'>Delete</a></span>&nbsp | &nbsp";
+                                            echo "<span><a href='javascript:void(0)' bookno='{$row->book_no}' class='edit_button'>Edit</a></span>&nbsp&nbsp&nbsp";
+                                            echo "<span><a href='javascript:void(0)' bookno='{$row->book_no}' class='delete_button'>Delete</a></span>&nbsp | &nbsp";
                                             echo "<span><a ";
 
                                             // Lend , Return Button
-                                            if ($row->status == "reserved")  echo "href='#' bookno='{$row->book_no}'    onclick=\"window.location.href='http://localhost/myfirstrepo/index.php/update_book/lend/?id={$row->book_no}'\">Lend</a>";
-                                            elseif ($row->status == "borrowed") echo "href='#' bookno='{$row->book_no}' onclick=\"window.location.href='http://localhost/myfirstrepo/index.php/update_book/received/?id={$row->book_no}'\">Return</a>";
-                                            else echo "'>(" . $row->status . ")";
 
+                                            /* edit by Edzer Padilla start */
+                                            if ($row->status == "reserved")  echo "bookno='{$row->book_no}' class='transaction_anchor lendButton' >Lend</a>";
+                                            elseif ($row->status == "borrowed") echo "bookno='{$row->book_no}' class = 'transaction_anchor receivedButton'>Return</a>";
+                                            else echo "'>(" . $row->status . ")";
+                                            /* edit end */
                                             echo "</span>";
 
                                             
                                         } else { //--------------- USER ACTIONS ----------------\\
                                             
-                                            //like button
-                                            echo
-                                            "<span>" .
-                                                "<a href='#' book_no='" . $row->book_no . "'>Favorite</a>&nbsp;&nbsp;" . //condition is to be added here
+                                            //favorite button
+                                            echo "<span>" .
+                                                "<button class='book_action' book_no='" . $row->book_no . "'>favorites</button>&nbsp;&nbsp;" . 
                                             "</span>" .
 
                                             //reserve button
                                             "<span>" .
-                                                "<a ";
+                                                "<button action_type='reserve' ";
 
-                                                if ($row->status == "available") echo "href='#' bookno='{$row->book_no}'>Reserve";
+                                                if ($row->status == "available") echo "class='book_action' book_no='{$row->book_no}'>reserve";
                                                 else echo ">(" . $row->status . ")";
 
-                                                echo "</a>" .
+                                                echo "</button>" .
                                             "</span>";
                                         }
 
@@ -75,14 +85,65 @@
                                          "<div book_data='date_published'>" . $row->date_published . "</div>" .
                                      "</td>";
 
-                                if ($is_admin) echo "<td book_data='Tags'>" . $row->Tags . "</td>";
+                                if (isset($_SESSION['type']) && $_SESSION['type'] == "admin") echo "<td book_data='tags'>" . $row->tags . "</td>";
 
 
                                
                                 echo "</tr>";
                             endforeach;
+                        } else  {
+                            echo "<span>No results to display</span>";
                         }
+
                     ?>
 
 </table>
 </div>
+<script> 
+
+     //Script author : Edzer Josh V. Padilla
+     //Description : AJAX used to call the lend and receieve modules and update the buttons of the page dynamically
+     $('.lendButton').on('click', lendClick);
+     $('.receivedButton').on('click', receivedClick);
+
+    function lendClick(){
+        $this = $(this);
+        $bookno = $this.attr('bookno');
+        $bookauthor = $this.closest('td').find('[book_data = author]').text()
+        $booktitle = $this.closest('td').find('[book_data = book_title]').text()
+        if (confirm('Are you sure you want to lend: \n'+$booktitle+'\n'+$bookno+'\n'+$bookauthor+"?")) {    
+             $.ajax({
+                url: 'index.php/update_book/lend/',
+                data: {id:$bookno},
+                success: function(data) { 
+                    $this.text('Return');
+                    $this.off('click').on('click', receivedClick);            }
+            });      
+
+        } else {
+        // Do nothing!
+        }
+
+    }
+
+     function receivedClick(){
+        $this = $(this);
+        $bookno = $this.attr('bookno');
+        $bookauthor = $this.closest('td').find('[book_data = author]').text()
+        $booktitle = $this.closest('td').find('[book_data = book_title]').text()
+         if (confirm('Are you sure you want to return: \n'+$booktitle+'\n'+$bookno+'\n'+$bookauthor+"?")) {
+             $.ajax({
+                url: 'index.php/update_book/received/',
+                data: {id:$bookno},
+                success: function(data) { 
+                    $this.text('(available)');
+                    $this.off('click');
+               // $this.addClass('lendButton'); 
+                }
+            });        
+        } else {
+        // Do nothing!
+        }
+     } 
+</script>
+

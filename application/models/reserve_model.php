@@ -16,12 +16,22 @@ class Reserve_Model extends CI_Model {
 
 		if ($q->num_rows() == 0)
 			return false;
-		else
-			return $q;
+		
+		else {
+			$this->db->query("DELETE FROM reserves WHERE
+				rank = (SELECT min(rank) FROM reserves) AND 
+				book_no LIKE '{$book_no}'");
 
+			return $q;
+		}
+	}
+
+	function enqueue($data) {
+		$this->db->insert('reserves', $data);
 	}
 
 	function get($username) {
+
 		$this->db->where('username', $username);
 		$q = $this->db->get('reserves');
 
@@ -29,6 +39,17 @@ class Reserve_Model extends CI_Model {
 			return $q;
 		else
 			return false;
+	}
+
+	function check($data) {
+
+		$this->db->where($data);
+		$q = $this->db->get('reserves');
+
+		if ($q->num_rows() == 0)
+			return false;
+		else
+			return true;
 	}
 }
 

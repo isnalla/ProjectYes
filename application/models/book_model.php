@@ -22,15 +22,15 @@ class Book_model extends CI_Model {
         $this->load->database();
     }
 
-    function insertBook($data){
+    function insert_book($data){
         $date_pub = $data['date_published'];
         $query = "INSERT INTO book (book_no,book_title,description,publisher,tags,date_published)".
-                " VALUES ('{$data['book_no']}'".
-                ",'{$data['book_title']}'".
-                ",'{$data['description']}'".
-                ",'{$data['publisher']}'".
-                ",'{$data['tags']}'".
-                ",".($date_pub==''?'null':("'".$date_pub."'")).")";
+            " VALUES ('{$data['book_no']}'".
+            ",'{$data['book_title']}'".
+            ",'{$data['description']}'".
+            ",'{$data['publisher']}'".
+            ",'{$data['tags']}'".
+            ",".($date_pub==''?'null':("'".$date_pub."'")).")";
 
         $this->db->query($query);
 
@@ -38,74 +38,32 @@ class Book_model extends CI_Model {
     }
 
     function get_book($book_no){
-        $query = "SELECT * FROM book WHERE book_no='".$book_no."'";
-       //$var = $this->db->query($query)->result()
-       //var_dump($var);
-        echo json_encode($this->db->query($query)->result());
-
-
+        $query = "SELECT * FROM book b, author a WHERE b.book_no='".$book_no."'";
+        $query2 = "AND a.book_no='".$book_no."'";
+        //$var = $this->db->query($query)->result()
+        //var_dump($var);
+        echo json_encode($this->db->query($query.$query2)->result());
     }
 
-    function editBook($data){
-        /*
-         *
-         * SANITATION GOES HERE
-         *
-         */
-
-        $data['prev_book_no'] = $data['book_no'];//temporary
+    function edit_book($data){
         $date_pub = $data['date_published'];
         $query = "UPDATE book SET book_no='".$data['book_no']."'".
-                                ",book_title='".$data['book_title']."'".
-                                ",status='".$data['status']."'".
-                                ",description='".$data['description']."'".
-                                " ,publisher='".$data['publisher']."'".
-                                ",tags='".$data['tags']."'".
-                                ",date_published=".($date_pub==''?'null':("'".$date_pub."'")).
-                                " WHERE book_no='".$data['prev_book_no']."'";
+            ",book_title='".$data['book_title']."'".
+            ",status='".$data['status']."'".
+            ",description='".$data['description']."'".
+            " ,publisher='".$data['publisher']."'".
+            ",tags='".$data['tags']."'".
+            ",date_published=".($date_pub==''?'null':("'".$date_pub."'")).
+            " WHERE book_no='".$data['prev_book_no']."'";
+        $query_author="UPDATE author SET name='{$data['author']}' WHERE book_no='{$data['book_no']}'";
 
         $this->db->query($query);
-        //update author;
-        $this->db->query("UPDATE author SET name='{$data['author']}' WHERE book_no='{$data['book_no']}'");
+        $this->db->query($query_author);
     }
 
- 
-    function delBook($book_no){
+
+    function delete_book($book_no){
         $this->db->query("DELETE FROM book WHERE book_no='{$book_no}'");
-    }
-
-    function query_result($details){
-        $details['search_term'] = filter_var($details['search_term'], FILTER_SANITIZE_STRING);
-
-        $tok = explode(" ", $details['search_term']);
-        
-        $q = array(
-                'select' => "select * from book b, author a ",
-                'where' => "where " . $details['status_check'] . " b.book_no = a.book_no and (",
-                'orderby' => ") order by " . $details['order_by']
-        );
-
-        $word_count = 0;
-        foreach ($tok as $search) {
-            // echo $search."<br>";
-            if($details['search_by']== 'book_title'){
-               $q['where'] .= "book_title like '%" . $search . "%' or description like '%" . $search . "%' or Tags like '%" . $search . "%' ";
-            } else {
-                $q['where'] .= $details['search_by'] . " like '%".$search."%' ";
-            }
-           
-            if($word_count < count($tok) - 1) {
-                $q['where'] .= " or ";
-            }
-
-            $word_count++;
-        }
-
-        $query_string = $q['select'] . $q['where'] . ")";// . $q['orderby'];
-
-
-        // echo $query_string;
-        return $this->db->query($query_string)->result();
     }
 }
 
@@ -114,5 +72,5 @@ class Book_model extends CI_Model {
 
 
 
-/* End of file booker.php */
-/* Location: ./application/controllers/booker.php */
+/* End of file book.php */
+/* Location: ./application/controllers/book.php */

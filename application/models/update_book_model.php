@@ -1,5 +1,10 @@
 <?php 
 
+/*
+	Author : Edzer Josh V. Padilla
+	File Description : a model used to handle database operations for lending and receiving of books
+*/
+
 Class Update_book_model extends CI_Model{
 	
 	function lend($data){
@@ -22,7 +27,6 @@ Class Update_book_model extends CI_Model{
 	$parameter = array(                                 // these are the data we would like to insert into our log- lend
                'book_no' => "{$data['book_no']}",
                'username_user' => "{$data['username_user']}",
-               'email' => "{$data['email']}",
                'username_admin' => "{$data['username_admin']}"
             );
 	$this->db->insert('lend', $parameter);   // insert query accepts 2 parameters. the table name and the parameters or values to be inserted
@@ -35,7 +39,7 @@ Class Update_book_model extends CI_Model{
 		$where = "transaction_no = {$data['transaction_no']}"; // where clause
 		$this->db->update('lend', $parameter, $where); // the update query accepts 3 parameters, the table name, values to be updated and the where clause
 		echo $this->db->update_string('lend', $parameter, $where);
-		echo "SUUUUUUUUUUCCCCCCCCCCCCCCCCCCCCEEEEEEEEEEEEEEESSSSSSSSSSSSs";
+
 	}
 	function getTransactionno($data){
 		$q = $this->db->query("SELECT transaction_no FROM lend WHERE

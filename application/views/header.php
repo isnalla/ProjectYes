@@ -10,116 +10,31 @@
 <head>
     <title><?php echo $title ?></title>
 
-    <script src="http://localhost/ProjectYes/jquery-1.11.0.js"></script>
-    <script name="input_validation_add">
-        var str, msg;
-        $(document).ready(function(){
+    <script src="<?php echo base_url();?>js/jquery-1.11.0.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url();?>css/reset.css"/>
+    <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="<?php echo base_url();?>css/style.css"/>
 
-            var columns = $('#table_add_book input');
-            columns.on('blur',checkAll);
-
-            checkAll();
-        });
-
-        function validateBookNo(){
-            str = $('#add_book_no').val();
-            msg = "";
-            if(str == ""){
-                msg+="Book no is required.";
-            }//else if(!str.match(/^[+]\([0-9]{12}\)$/) ){
-            else if(!str.match(/^[a-zA-Z0-9 ]+$/)){
-                msg+="Wrong Input";
-            }
-            else if(msg == "Invalid input: "){
-                msg = "";
-            }
-            document.getElementsByName("book_no_msg")[0].innerHTML = msg;
-
-            if(msg == ""){
-                return true;
-            }
-            return false;
-        }
-        function validateTitle(){
-            str = $('#add_book_title').val();
-            msg = "";
-            if(str == ""){
-                msg+="Book title is required.";
-            }
-            else if(!str.match(/^[a-zA-Z0-9 ]+$/)){
-                msg+="Wrong Input";
-            }
-            else if(msg == "Invalid input: "){
-                msg = "";
-            }
-            document.getElementsByName("book_title_msg")[0].innerHTML = msg;
-
-            if(msg == ""){
-                return true;
-            }
-            return false;
-        }
-
-        function validateDatePublished(){
-            var str = $('#add_date_published').val().toString();
-            var currentDate = str.split("-");
-            str = new Date(currentDate[0],(currentDate[1] - 1), (currentDate[2]));
-            var today = new Date();
-            var dd = today.getDate();
-            var mm = today.getMonth()+1; //January is 0!
-            var year = today.getFullYear();
-            msg = "";
-
-            if(str.getFullYear()>=year){
-                if(str.getMonth()+1 >= mm){
-                    if(str.getDate() > dd){
-                        msg+="Wrong date.";
-                    }
-                    else{
-                        msg+="Wrong date.";
-                    }
-                }
-            }
-            document.getElementsByName("date_published_msg")[0].innerHTML = msg;
-
-            if(msg == ""){
-                return true;
-            }
-            return false;
-
-        }
-
-        function validateName(name){
-            //regex for name
-
-            str = $('#add_'+name).val().toString();
-            msg = "";
-
-            //write regex here
-
-            if(msg == ""){
-                return true;
-            }
-            return false;
-        }
-/*
-        function validateTags(){
-            return true;
-        }*/
-
-        function checkAll(){
-            var addButton = $('#add_button');
-
-            if( validateBookNo() && validateTitle() && validateName('author')
-                && validateName('publisher')  && validateDatePublished()&& validateTags())
-            {
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-
-    </script>
 </head>
 <body>
+
+<div id="navbar">
+	<a href="<?php echo base_url();?>">LOGOIMAGETHISYIH</a>
+	<a href="home">Home</a>
+	<a href="about_us">About Us</a>
+	<a href="help">Help</a>
+    <a href="faq">FAQ</a>
+
+	<div id="acc_manager">
+		<?php
+			if(isset($_SESSION['type'])){
+				if($_SESSION['type'] == "regular")
+					include 'logged_user_view.php';
+				else
+					include 'admin_user_view.php';
+			}else{
+				include 'login_view.php';;
+			}
+		?>
+	</div>
+</div>

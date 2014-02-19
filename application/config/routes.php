@@ -38,8 +38,12 @@
 |
 */
 
-$route['default_controller'] = "booker"; // change this
+$route['default_controller'] = "home"; // change this
 $route['404_override'] = '';
+/* append this if a function accepts parameters from URI: (/(:any)*)*
+    ie. ( homie|about_us|(foo(/(:any)*)*) )
+*/
+$route['(home|about_us|faq|help)'] = "home/$0";
 
 
 /* End of file routes.php */
