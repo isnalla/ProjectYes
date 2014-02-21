@@ -5,7 +5,8 @@
  $('#content_container').ready(function(){
     /***** EVENT ATTACHMENTS *****/
 
-   $('#add_faq_container').hide();
+   $('#add_faq_container').closest("tr").hide();
+   $('#edit_faq_container').closest("tr").hide();
    $('#faq_button').on("click",showME);
    $('#add_faq_form').submit(addFAQ);
 
@@ -13,7 +14,11 @@
 
 function showME(event){
 	event.preventDefault();  
-	 $('#add_faq_container').show();
+	console.log("show me");
+	var addFaqContainer = 
+	 $('#add_faq_container');
+	 addFaqContainer.closest("tr").show();
+	 addFaqContainer.show();
 }
 function addFAQ(event){
 	event.preventDefault();  

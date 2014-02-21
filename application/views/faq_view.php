@@ -13,22 +13,6 @@
 
     	<table id="faq_table">
     		<tbody>
-				<tr>
-                     <td>
-
-                        <div id="add_faq_container" class="show_me">
-                            <form autocomplete="on" id="add_faq_form">
-                                <h4>ADD FAQ</h4>
-                                <input type="text" name="question" id="add_question" placeholder="Question" required/>
-                                <br/>
-                                <textarea name="answer" id="add_answer" placeholder="Answer..."  required></textarea>
-                                <br/> 
-                                <button type="submit" name="add_faq_button" id="add_faq_button">Add</button>
-                                <button id="add_faq_cancel_button" name="add_faq_cancel_button" >Cancel</button>
-                            </form>
-                        </div>
-    				</td>
-    			</tr>
     			<tr id="">
     				<td class="">
     					<span class="question">

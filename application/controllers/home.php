@@ -73,10 +73,12 @@ class Home extends CI_Controller {
     public function faq(){
         $data['title'] = "eICS Lib FAQ";
         $this->load->view("header", $data);
-        $this->load->view("faq_view");
         //$is_admin = isset($_SESSION['type']) && $_SESSION['type'] == "admin";
         //if ($is_admin) $this->load->view('manage_view');
-
+        $is_admin = isset($_SESSION['type']) && $_SESSION['type'] == "admin";
+        if ($is_admin)
+         $this->load->view('faq_manage_view');
+        else $this->load->view("faq_view");
         $this->load->view("footer");
     }
 
