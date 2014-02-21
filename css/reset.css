@@ -84,14 +84,14 @@ abbr[title], dfn[title] {
 
 table {
     border-collapse:collapse;
-    border-spacing:0;
+    border-spacing:2;
 }
 
 /* change border colour to suit your needs */
 hr {
     display:block;
     height:1px;
-    border:0;   
+    border:3;   
     border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;

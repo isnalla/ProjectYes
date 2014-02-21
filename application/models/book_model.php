@@ -37,6 +37,16 @@ class Book_model extends CI_Model {
         $this->db->query("INSERT INTO author (book_no,name) VALUES ('{$data['book_no']}','{$data['author']}')");
     }
 
+     function add_faq($data){
+        $query = "INSERT INTO faq (question,answer)".
+            " VALUES ('{$data['question']}'".
+            ",'{$data['answer']}'".")";
+
+        $this->db->query($query);
+
+       // $this->db->query("INSERT INTO author (book_no,name) VALUES ('{$data['book_no']}','{$data['author']}')");
+    }
+
     function get_book($book_no){
         $query = "SELECT * FROM book b, author a WHERE b.book_no='".$book_no."'";
         $query2 = "AND a.book_no='".$book_no."'";

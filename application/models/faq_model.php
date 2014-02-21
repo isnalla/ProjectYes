@@ -6,6 +6,14 @@ class Faq_model extends CI_Model {
         parent::__construct();
         $this->load->database();
     }
+
+     function add_faq($data){
+        $query = "INSERT INTO faq (question,answer)".
+            " VALUES ('{$data['question']}'".
+            ",'{$data['answer']}'".")";
+
+        $this->db->query($query);
+    }
 }
 
 

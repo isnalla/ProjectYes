@@ -26,13 +26,14 @@ class Home extends CI_Controller {
     public function index(){
         $data['title'] = "eICS Lib";
         $this->load->view("header", $data);
-        $this->load->view("search_view", ["home"=>true]);
-
-        $is_admin = isset($_SESSION['type']) && $_SESSION['type'] == "admin";
+       // $this->load->view("search_view");//, ["home"=>true]);
+          $this->load->view("faq_view");
+            $this->load->view("faq_manage_view");
+        /*$is_admin = isset($_SESSION['type']) && $_SESSION['type'] == "admin";
         if ($is_admin) $this->load->view('manage_view');
 
         $this->load->view("news_view");
-        if ($is_admin) $this->load->view('news_manage_view');
+        if ($is_admin) $this->load->view('news_manage_view');*/
 
         $this->load->view("footer");
     }
@@ -41,16 +42,17 @@ class Home extends CI_Controller {
         $data['title'] = "eICS Lib Home";
         $this->load->view("header", $data);
         $this->load->view("search_view");
-        $data["announcements"] =[
+       /* $data["announcements"] =[
                                     "Ann1"=>"this is the first announcement",
                                     "Ann2"=>"this is the second announcement"
                                 ];
+        */
 
         $this->load->view("announcements_view", $data);
 
         if (isset($_SESSION['type']) && $_SESSION['type'] == "admin"){
             $this->load->view('manage_view');
-        }
+        } 
 
         $this->load->view("footer");
     }
